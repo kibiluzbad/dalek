@@ -1,0 +1,32 @@
+<table class="table table-striped">
+  <caption>Time sheet</caption>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Entrada</th>
+      <th>Saida</th>
+      <th>Almoço</th>
+      <th>Descricao</th>
+      <th>Horas</th>
+      <th>Extras</th>
+      <th>Total</th>
+	  <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="items in timeSheet">
+      <td>{{items.date}}</td>
+      <td>{{items.entry}}</td>
+      <td>{{items.out}}</td>
+      <td>{{items.launchTime}}</td>
+      <td>{{items.description}}</td>
+      <td>{{items.hours}}</td>
+      <td>{{items.extra}}</td>
+      <td>{{items.total}}</td>
+	  <td>
+	    <a href="#/timesheet/{{items.date}}" class="btn  btn-success">Editar</a>
+		<a href="#/timesheet/{{items.date}}" class="btn  btn-danger">Deletar</a>	  
+	  </td>
+    </tr>
+  </tbody>
+</table>

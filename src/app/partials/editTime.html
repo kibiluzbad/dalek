@@ -1,0 +1,55 @@
+<form class="form-horizontal">
+  <fieldset>
+    <legend>{{time.date}}</legend>
+	
+    <div class="control-group">
+		<label class="control-label" for="date">Data:</label>
+		<div class="controls">
+			<input id="date" type="text" ng-model="time.date" />
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<label class="control-label" for="entry">Entrada:</label>
+		<div class="controls">
+			<input id="entry" type="text" ng-model="time.entry" />
+		</div>
+	</div>
+	
+	<div class="control-group">
+        <label class="control-label" for="out">Saida:</label>
+	    <div class="controls">
+			<input id="out" type="text" ng-model="time.out" />
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<label class="control-label" for="description">Atividades:</label>
+		<div class="controls">
+			<textarea id="description" type="text" ng-model="time.description" rows="5"></textarea>
+	    </div>
+	</div>
+	
+	<div class="control-group">
+		<label class="control-label" for="wentToLaunch">Saida almoço:</label>
+		<div class="controls">
+			<input type="text" ng-model="time.wentToLaunch">
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<label class="control-label" for="backFromLaunch">Volta almoço:</label>
+		<div class="controls">
+			<input type="text" ng-model="time.backFromLaunch">
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<div class="controls">
+			<button type="submit" ng-click="save()" class="btn btn-primary">Lançar</button>			
+			<button type="button" ng-click="delete()" class="btn btn-danger">Excluir</button>
+			<a href="#/timesheet" class="btn">Voltar</a>
+		</div>
+	</div>	
+  </fieldset>
+</form>
